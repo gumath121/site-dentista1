@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Odonto Prime | Clínica Odontológica</title>
+
+    <meta name="description" content="Cuide do seu sorriso com uma equipe especializada, atendimento humanizado e tecnologia moderna.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #17324d;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 25px 6%;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #8ed8d2;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        nav a {
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8ed8d2;
+        }
+
+        .header-button {
+            background: #8ed8d2;
+            color: #17324d;
+            padding: 13px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(90deg, rgba(11, 38, 61, 0.94) 0%, rgba(11, 38, 61, 0.78) 48%, rgba(11, 38, 61, 0.35) 100%),
+                url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1800&q=85')
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 130px 6% 80px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            color: #ffffff;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #8ed8d2;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(45px, 6vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #e7eef3;
+            margin-bottom: 35px;
+            max-width: 570px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #8ed8d2;
+            color: #17324d;
+            padding: 16px 27px;
+            border-radius: 30px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: #ffffff;
+            padding: 16px 27px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* INFO BAR */
+
+        .info-bar {
+            background: #ffffff;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+            position: relative;
+            margin: -45px auto 0;
+            max-width: 1050px;
+            border-radius: 15px;
+            padding: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            z-index: 5;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 5px 15px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e5f7f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .info-item strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .info-item span {
+            font-size: 13px;
+            color: #6d7d8b;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 100px 6%;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #54aaa3;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            margin-top: 12px;
+            color: #17324d;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 15px auto 0;
+            color: #70808e;
+            line-height: 1.7;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #f7fbfb;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #e7eeee;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 40px rgba(25,70,80,0.10);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 15px;
+            background: #e5f7f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #72818d;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 500px;
+            border-radius: 25px;
+            background:
+                url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85')
+                center/cover no-repeat;
+        }
+
+        .about-text span {
+            color: #54aaa3;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            line-height: 1.15;
+            margin: 15px 0 20px;
+        }
+
+        .about-text p {
+            color: #6e7e8b;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 25px 0 30px;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #54aaa3;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background:
+                linear-gradient(90deg, rgba(18,58,79,0.95), rgba(18,58,79,0.85)),
+                url('https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1600&q=85')
+                center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            color: #dce7eb;
+            max-width: 600px;
+            margin: auto auto 30px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #102b40;
+            color: #ffffff;
+            padding: 60px 6% 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+        }
+
+        footer p,
+        footer li {
+            color: #aebdc7;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 45px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #8497a4;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .header-button {
+                padding: 11px 16px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 680px;
+            }
+
+            .hero-content {
+                padding-top: 140px;
+            }
+
+            h1 {
+                font-size: 47px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .info-bar {
+                margin: -30px 20px 0;
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 6%;
+            }
+
+            .section-title h2,
+            .about-text h2 {
+                font-size: 38px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                min-height: 380px;
+            }
+
+            .cta h2 {
+                font-size: 38px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                Odonto<span>Prime</span>
+            </div>
+
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="#contato" class="header-button">
+                Agendar consulta
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="tag">
+                        Clínica odontológica
+                    </span>
+
+                    <h1>
+                        Seu sorriso merece um cuidado especial.
+                    </h1>
+
+                    <p>
+                        Odontologia moderna, atendimento humanizado e
+                        tratamentos personalizados para você cuidar do seu
+                        sorriso com segurança e confiança.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#contato" class="btn-primary">
+                            Agendar consulta
+                        </a>
+
+                        <a href="#servicos" class="btn-secondary">
+                            Conheça nossos tratamentos
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFO BAR -->
+
+        <div class="info-bar">
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    🦷
+                </div>
+
+                <div>
+                    <strong>Atendimento humanizado</strong>
+                    <span>Cuidado em cada detalhe</span>
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ✨
+                </div>
+
+                <div>
+                    <strong>Tecnologia moderna</strong>
+                    <span>Mais conforto e segurança</span>
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ❤️
+                </div>
+
+                <div>
+                    <strong>Equipe especializada</strong>
+                    <span>Profissionais qualificados</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <section class="services" id="servicos">
+
+            <div class="section-container">
+
+                <div class="section-title">
+
+                    <span>Nossos tratamentos</span>
+
+                    <h2>
+                        Cuide do seu sorriso
+                    </h2>
+
+                    <p>
+                        Soluções odontológicas completas para manter
+                        sua saúde bucal e transformar seu sorriso.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🦷
+                        </div>
+
+                        <h3>
+                            Clínica Geral
+                        </h3>
+
+                        <p>
+                            Prevenção, avaliação e cuidados completos
+                            para manter sua saúde bucal em dia.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            ✨
+                        </div>
+
+                        <h3>
+                            Clareamento Dental
+                        </h3>
+
+                        <p>
+                            Deixe seu sorriso mais iluminado através
+                            de tratamentos personalizados.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            😁
+                        </div>
+
+                        <h3>
+                            Ortodontia
+                        </h3>
+
+                        <p>
+                            Tratamentos para alinhar seus dentes e
+                            melhorar a estética e a função do sorriso.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            💎
+                        </div>
+
+                        <h3>
+                            Facetas Dentárias
+                        </h3>
+
+                        <p>
+                            Soluções estéticas para transformar a
+                            aparência do seu sorriso.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🔹
+                        </div>
+
+                        <h3>
+                            Implantes
+                        </h3>
+
+                        <p>
+                            Recuperação da função e estética do sorriso
+                            com tratamentos personalizados.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🪥
+                        </div>
+
+                        <h3>
+                            Limpeza e Prevenção
+                        </h3>
+
+                        <p>
+                            Cuidados preventivos para manter dentes e
+                            gengivas saudáveis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="sobre">
+
+            <div class="section-container">
+
+                <div class="about">
+
+                    <div class="about-image"></div>
+
+
+                    <div class="about-text">
+
+                        <span>
+                            Sobre a clínica
+                        </span>
+
+                        <h2>
+                            Mais do que cuidar dos dentes, cuidamos de pessoas.
+                        </h2>
+
+                        <p>
+                            Na OdontoPrime, acreditamos que cada paciente
+                            merece um atendimento personalizado, acolhedor
+                            e seguro.
+                        </p>
+
+                        <p>
+                            Nossa equipe trabalha para oferecer uma
+                            experiência tranquila desde a primeira consulta
+                            até o acompanhamento de cada tratamento.
+                        </p>
+
+                        <ul class="check-list">
+
+                            <li>
+                                Atendimento personalizado
+                            </li>
+
+                            <li>
+                                Profissionais especializados
+                            </li>
+
+                            <li>
+                                Ambiente moderno e confortável
+                            </li>
+
+                            <li>
+                                Tecnologia para mais segurança
+                            </li>
+
+                        </ul>
+
+                        <a href="#contato" class="btn-primary">
+                            Quero agendar uma consulta
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta" id="contato">
+
+            <div class="section-container">
+
+                <h2>
+                    Pronto para cuidar do seu sorriso?
+                </h2>
+
+                <p>
+                    Agende sua avaliação e descubra como podemos
+                    ajudar você a conquistar um sorriso mais saudável
+                    e confiante.
+                </p>
+
+                <a href="https://wa.me/5515999999999" class="btn-primary">
+                    Falar pelo WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    OdontoPrime
+                </h3>
+
+                <p>
+                    Clínica odontológica especializada em cuidar
+                    do seu sorriso com segurança, tecnologia e
+                    atendimento humanizado.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Atendimento
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Segunda a sexta: 08h às 18h
+                    </li>
+
+                    <li>
+                        Sábado: 08h às 12h
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contato
+                </h3>
+
+                <ul>
+
+                    <li>
+                        (15) 99999-9999
+                    </li>
+
+                    <li>
+                        contato@odontoprime.com.br
+                    </li>
+
+                    <li>
+                        Sua cidade - SP
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 OdontoPrime. Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/5515999999999"
+        class="whatsapp"
+        aria-label="WhatsApp"
+        target="_blank"
+    >
+        ☎
+    </a>
+
+</body>
+</html>
